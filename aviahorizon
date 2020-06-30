@@ -9,7 +9,7 @@ local screen = screen --export
 local gyro = gyro --export
 local telemeter = telemeter --export
 local systemScreen = true --export
-local debug = false --export
+local debug = true --export
 local concat = table.concat
 local insert = table.insert
 
@@ -34,7 +34,7 @@ local function telemeterDistanceToDegree()
     return self.degrees
 end
 
-local function generateHtml(roll, compass, color, telemeterDistance, pitch, speed, distance, altitude, vertSpeed)
+local function generateHtml(roll, compass, color, telemeterDistance, pitch, speed, distance, altitude, vertSpeed, throttle, fuel)
     local buffer = {}
     local svg = [[
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 517.35 422.63">
@@ -81,10 +81,13 @@ local function generateHtml(roll, compass, color, telemeterDistance, pitch, spee
                 <circle cx="260.46" cy="211.32" r="14.29" transform="matrix(.98232 -.18721 .18721 .98232 -34.96 52.51)"/>
                 <path d="M225.06 211.32h21.1m28.54 0h21.1m-35.36 35.38v-21.1" class="M"/>
             </g>
-    	<text x="480" y="240" class="K S">]] .. vertSpeed .. [[</text>
+    	 
     	 <text x="251" y="290" class="K S">]] .. distance .. [[</text>
            <text x="10" y="200" class="K S">]] .. speed .. [[</text>
+           <text x="10" y="240" class="K S">]] .. throttle .. [[</text>
+           <text x="10" y="340" class="K S">]] .. fuel .. [[</text>
     	  <text x="480" y="200" class="K S">]] .. altitude .. [[</text>
+           <text x="480" y="240" class="K S">]] .. vertSpeed .. [[</text>
     	  
             </svg>
     ]]
@@ -103,6 +106,8 @@ local function updateScreen()
     if debug == true then
         system.print("Debug:")
     end
+    local fuel = math.ceil(atmofueltank_1.getItemsMass()/4)
+    local throttle = math.ceil(unit.getThrottle())
     gyro.setYawWorldReference({0, 0, -1})
     local yaw = gyro.getYaw()
     if vertSpeed == nil then vertSpeed = 0 end
@@ -110,7 +115,7 @@ local function updateScreen()
     local speed = math.floor(vec3(core.getWorldVelocity()):len() * 3.6 + 0.5)
     local altitude = math.ceil(core.getAltitude())
     if distance > 100 then distance = altitude else distance = math.ceil(telemeter.getDistance()) end
-    local html = generateHtml(gyro.getRoll(), -yaw, self.defaultColor, telemeterDistanceToDegree(), getPitch(), speed, distance, altitude, vertSpeed)
+    local html = generateHtml(gyro.getRoll(), -yaw, self.defaultColor, telemeterDistanceToDegree(), getPitch(), speed, distance, altitude, vertSpeed, throttle, fuel)
     if systemScreen == true then
         local modifiedHtml = [[
             <style>
@@ -149,6 +154,9 @@ if systemScreen == true then
 else
     artificialHorizon:onStart()
 end
+
+
+
 
 --***********************************************system.update********************************************
  
