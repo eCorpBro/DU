@@ -155,7 +155,7 @@ end
 artificialHorizon:onUpdate()
 
 --***********************************************tick.vSpeed********************************************
---Celculate vertical speed
+--Calculate vertical speed
 
 altBefore = math.ceil(core.getAltitude())
 vertSpeed = altBefore - altAfter
