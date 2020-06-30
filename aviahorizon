@@ -2,6 +2,8 @@
 --You need set [Gyroscope] [Telemeter] and link to [Command seat controller] and named slots [gyro] [telemeter] 
 --***********************************************unit.start********************************************
 
+self.setTimer("vSpeed",1)
+
 artificialHorizon = {}
 local screen = screen --export
 local gyro = gyro --export
@@ -32,7 +34,7 @@ local function telemeterDistanceToDegree()
     return self.degrees
 end
 
-local function generateHtml(roll, compass, color, telemeterDistance, pitch, speed, distance, altitude)
+local function generateHtml(roll, compass, color, telemeterDistance, pitch, speed, distance, altitude, vertSpeed)
     local buffer = {}
     local svg = [[
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 517.35 422.63">
@@ -79,6 +81,7 @@ local function generateHtml(roll, compass, color, telemeterDistance, pitch, spee
                 <circle cx="260.46" cy="211.32" r="14.29" transform="matrix(.98232 -.18721 .18721 .98232 -34.96 52.51)"/>
                 <path d="M225.06 211.32h21.1m28.54 0h21.1m-35.36 35.38v-21.1" class="M"/>
             </g>
+    	<text x="480" y="240" class="K S">]] .. vertSpeed .. [[</text>
     	 <text x="251" y="290" class="K S">]] .. distance .. [[</text>
            <text x="10" y="200" class="K S">]] .. speed .. [[</text>
     	  <text x="480" y="200" class="K S">]] .. altitude .. [[</text>
@@ -92,16 +95,22 @@ end
 local function updateScreen()
     local self = {}
     self.defaultColor = "#cecece"
+    if btnDN.getState() == 1 then 
+    	self.defaultColor = "#000033" 
+    else 
+    	self.defaultColor = "#cecece"
+    end
     if debug == true then
         system.print("Debug:")
     end
     gyro.setYawWorldReference({0, 0, -1})
     local yaw = gyro.getYaw()
+    if vertSpeed == nil then vertSpeed = 0 end
     local distance = 0
     local speed = math.floor(vec3(core.getWorldVelocity()):len() * 3.6 + 0.5)
     local altitude = math.ceil(core.getAltitude())
     if distance > 100 then distance = altitude else distance = math.ceil(telemeter.getDistance()) end
-    local html = generateHtml(gyro.getRoll(), -yaw, self.defaultColor, telemeterDistanceToDegree(), getPitch(), speed, distance, altitude)
+    local html = generateHtml(gyro.getRoll(), -yaw, self.defaultColor, telemeterDistanceToDegree(), getPitch(), speed, distance, altitude, vertSpeed)
     if systemScreen == true then
         local modifiedHtml = [[
             <style>
@@ -144,3 +153,10 @@ end
 --***********************************************system.update********************************************
  
 artificialHorizon:onUpdate()
+
+--***********************************************tick.vSpeed********************************************
+--Celculate vertical speed
+
+altBefore = math.ceil(core.getAltitude())
+vertSpeed = altBefore - altAfter
+altAfter = altBefore
