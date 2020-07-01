@@ -2,7 +2,7 @@
 --You need set [Gyroscope] [Telemeter] and link to [Command seat controller] and named slots [gyro] [telemeter] 
 --***********************************************unit.start********************************************
 
-self.setTimer("vSpeed",1)
+self.setTimer("second",1)
 
 artificialHorizon = {}
 local screen = screen --export
@@ -162,9 +162,8 @@ end
  
 artificialHorizon:onUpdate()
 
---***********************************************tick.vSpeed********************************************
+--***********************************************tick.second********************************************
 --Calculate vertical speed
-
 altBefore = math.ceil(core.getAltitude())
 vertSpeed = altBefore - altAfter
 altAfter = altBefore
