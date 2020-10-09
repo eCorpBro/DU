@@ -1,0 +1,93 @@
+
+    <style>
+    table {
+     color: white;	
+     table-layout:fixed;   
+     width: 100%; /* Ширина таблицы */ 
+     
+    }
+    th {
+     border: 1px solid white;
+     padding-left: 5px; /* Поля в ячейке */ 
+	text-align: left;
+	font-size: 2em;
+    }
+    caption{
+	font-size: 3em;
+	}
+     .col1 { width: 300px; }
+     .col2 { width: 100px; }
+  </style>
+  <table>
+        <caption >Materials</caption>
+        <tr>
+            <th class="col1">Steel </th>
+            <th class="col2">15.000</th>
+		  <th class="col1">Silumin</th>
+            <th class="col2">15.000</th>
+        </tr>
+        <tr>
+            <th>Duralumin</th>
+            <th>7.000</th>
+            <th>Al-Fe alloy </th>
+            <th>10.000</th>
+	   </tr>
+        <tr>
+            <th>Calcium reinforced copper</th>
+            <th>5.000</th>
+            <th>Policarbonate plastic</th>
+            <th>7.000</th>
+        </tr>
+        <tr>
+            <th>Polycalcyte plastic</th>
+            <th>3.000</th>
+		  <th>Glass</th>
+            <th>2.000</th>
+        </tr>
+    </table>
+
+    <table>
+        <caption >Basic components</caption>
+        	
+	   <tr>
+            <th class="col1">Basic pipe </th>
+            <th class="col2">2.000</th>
+		  <th class="col1">Basic screw</th>
+            <th class="col2">2.000</th>
+        </tr>
+        <tr>
+            <th>Basic connector</th>
+            <th>2.000</th>
+		  <th>Basic component</th>
+            <th>1.000</th>
+        </tr>
+        <tr>
+            <th>Basic electronics</th>
+            <th>500</th>
+		  <th>Basic fixation</th>
+            <th>1.000</th>
+        </tr>
+        
+    </table>
+
+
+    <table>
+        <caption >Uncommon components</caption>
+        	
+	   <tr>
+            <th class="col1">Uncommon component</th>
+            <th class="col2">1.000</th>
+		  <th class="col1">Uncommon power system</th>
+            <th class="col2">1.000</th>
+        </tr>
+        <tr>
+            <th>Uncommon electronic</th>
+            <th>500</th>
+		  <th>Uncommon casing XS</th>
+            <th>100</th>
+        </tr>
+        
+    </table>
+
+
+
