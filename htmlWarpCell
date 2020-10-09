@@ -1,0 +1,102 @@
+
+    <style>
+    table {
+     color: white;	
+     table-layout:fixed;   
+     width: 100%; /* Ширина таблицы */ 
+     
+    }
+    th {
+     border: 1px solid white;
+     padding-left: 20px; /* Поля в ячейке */ 
+	text-align: left;
+	font-size: 2em;
+        
+    }
+    caption{
+	font-size: 3em;
+	}
+     .yellow{color:yellow;}   
+     .green{color: green;} 
+     .red{color:red;}
+     .col1 { width: 300px; }
+     .col2 { width: 100px; }
+  </style>
+  <table>
+        <caption >Warp cell crafter</caption>
+        <tr>
+            <th class="col1 green">3D Printer M</th>
+            <th class="col2 green">5/5</th>
+		  <th class="col1 green"> Chemical industry M</th>
+            <th class="col2 green">3/3</th>
+        </tr>
+        <tr>
+            <th>Container L</th>
+            <th>1/-</th>
+            <th>Container M</th>
+            <th>1/-</th>
+	   </tr>
+        <tr>
+            <th>Container S</th>
+            <th>10/-</th>
+            <th>Delay line</th>
+            <th>2/-</th>
+	   </tr>
+        <tr>
+            <th>Detection zone XS</th>
+            <th>2/-</th>
+            <th>Electronics Industry M</th>
+            <th>23/-</th>
+	   </tr>
+        <tr>
+            <th>Glass furnance M</th>
+            <th>21/-</th>
+            <th>Screen M</th>
+            <th>2/-</th>
+	   </tr>
+        <tr>
+            <th>Screen XS</th>
+            <th>9/-</th>
+            <th>Sliding door S</th>
+            <th>2/-</th>
+	   </tr>
+        <tr>
+            <th>Smelter M</th>
+            <th>3/-</th>
+            <th>Static core unit XS</th>
+            <th>1/-</th>
+	   </tr>
+        <tr>
+            <th>Transfer unit</th>
+            <th>7-</th>
+            <th>-</th>
+            <th>-</th>
+	   </tr>
+        <tr>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+	   </tr>
+        <tr>
+            <th>Luminiscent White Glass</th>
+            <th>34</th>
+            <th>Matte red plastic</th>
+            <th>82</th>
+	   </tr>
+        <tr>
+            <th>Polished gray iron</th>
+            <th>294</th>
+            <th>Polished white iron</th>
+            <th>8</th>
+	   </tr>
+  
+    </table>
+
+    
+
+
+
+
+
+
