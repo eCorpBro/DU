@@ -1,0 +1,175 @@
+
+    <style>
+    table {
+     color: white;	
+     table-layout:fixed;   
+     width: 100%; /* Ширина таблицы */ 
+     
+    }
+    th {
+     border: 1px solid white;
+     padding-left: 20px; /* Поля в ячейке */ 
+	text-align: left;
+	font-size: 2em;
+        
+    }
+    caption{
+	font-size: 3em;
+	}
+     .yellow{color:yellow;}   
+     .green{color: green;} 
+     .red{color:red;}
+     .col1 { width: 300px; }
+     .col2 { width: 100px; }
+  </style>
+  <table>
+        <caption >Jupiter</caption>
+        <tr>
+            <th class="col1 green"> Adjustor L</th>
+            <th class="col2 green">24/24</th>
+		  <th class="col1 green"> Adjustor M</th>
+            <th class="col2 green">48/48</th>
+        </tr>
+        <tr>
+            <th class="green"> Aileron S</th>
+            <th class="green"> 12/12</th>
+            <th class="green"> Atmospheric airbraker L</th>
+            <th class="green">12/12</th>
+	   </tr>
+        <tr>
+            <th class="green"> Atmospheric engine M</th>
+            <th class="green">2/2</th>
+            <th class="green"> Atmospheric fuel tank M</th>
+            <th class="green">2/2</th>
+        </tr>
+        <tr>
+            <th class="yellow">Atmospheric fuel tank L</th>
+            <th class="yellow">1/-</th>
+		  <th class="green"> Command seat control</th>
+            <th class="green">1/1</th>
+        </tr>
+        <tr>
+            <th class="green"> Compact aileron M</th>
+            <th class="green">4/4</th>
+		  <th>Container hub</th>
+            <th>3/2</th>
+        </tr>
+        <tr>
+            <th class="green">Container L</th>
+            <th class="green">5/5</th>
+		  <th class="green"> Container S</th>
+            <th class="green">5/5</th>
+        </tr>
+        <tr>
+            <th class="green"> Delay line</th>
+            <th class="green">1/1</th>
+		  <th class="green"> Detection zone XS</th>
+            <th class="green">2/2</th>
+        </tr>
+        <tr>
+            <th class="green"> Dynamic core S</th>
+            <th class="green">1/1</th>
+		  <th class="green"> Flat hover engine L</th>
+            <th class="green">6/6</th>
+        </tr>
+        <tr>
+            <th class="green"> Gyroscope</th>
+            <th class="green">1/1</th>
+		  <th class="red">Landing gear</th>
+            <th class="red">4/1</th>
+        </tr>
+        <tr>
+            <th>Military atmospheric engine L</th>
+            <th>4/-</th>
+		  <th class="green">Navigation chair</th>
+            <th class="green">2/2</th>
+        </tr>
+        <tr>
+            <th class="green"> OR operator</th>
+            <th class="green">1/1</th>
+		  <th class="green">Reinforced sliding door</th>
+            <th class="green">2/2</th>
+        </tr>
+        <tr>
+            <th class="green"> Relay</th>
+            <th class="green">1/1</th>
+		  <th class="green"> Ressurection node</th>
+            <th class="green">1/1</th>
+        </tr>
+        <tr>
+            <th class="green">Retro-rocket brake L</th>
+            <th class="green">18/18</th>
+		  <th class="green">Sliding door S</th>
+            <th class="green">4/4</th>
+        </tr>
+        <tr>
+            <th class="green"> Small atmospheric radar</th>
+            <th class="green">1/1</th>
+		  <th class="yellow">Space engine L</th>
+            <th class="yellow">4/2</th>
+        </tr>
+        <tr>
+            <th class="green">Space engine M</th>
+            <th class="green">12/12</th>
+		  <th class="yellow">Space fuel tank L</th>
+            <th class="yellow">1/-</th>
+        </tr>
+        <tr>
+            <th class="green">Space fuel tank M</th>
+            <th class="green">2/2</th>
+		  <th class="green">Space radar S</th>
+            <th class="green">1/1</th>
+        </tr>
+        <tr>
+            <th class="green">Stabilizer M</th>
+            <th class="green">4/4</th>
+		  <th class="green">Steel column</th>
+            <th class="green">8/8</th>
+        </tr>
+        <tr>
+            <th>Territory scaner</th>
+            <th>1/-</th>
+		  <th class="green">Vertical booster L</th>
+            <th class="green">4/4</th>
+        </tr>
+      
+        <tr>
+            <th class="green">Vertical light S</th>
+            <th class="green">2/2</th>
+		  <th class="green">Window L</th>
+            <th class="green">5/5</th>
+        </tr>
+        <tr>
+            <th class="green">Window M</th>
+            <th class="green">6/6</th>
+		  <th class="green">Wing M</th>
+            <th class="green">28/28</th>
+        </tr>
+        <tr>
+            <th class="green">Galvanized light gray aluminium</th>
+            <th class="green">595</th>
+		  <th class="green">Galvanized red steel</th>
+            <th class="green">40</th>
+        </tr>
+        <tr>
+            <th class="red">Luminiscent White Glass</th>
+            <th class="red">150</th>
+		  <th class="green">Polished black aluminium</th>
+            <th class="green">430</th>
+        </tr>
+        <tr>
+            <th class="green">Polished gray aluminium</th>
+            <th class="green">513</th>
+		  <th>-</th>
+            <th>-</th>
+        </tr>
+        
+      
+    </table>
+
+    
+
+
+
+
+
