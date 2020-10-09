@@ -1,0 +1,118 @@
+
+    <style>
+    table {
+     color: white;	
+     table-layout:fixed;   
+     width: 100%; /* Ширина таблицы */ 
+     
+    }
+    th {
+     border: 1px solid white;
+     padding-left: 20px; /* Поля в ячейке */ 
+	text-align: left;
+	font-size: 2em;
+    }
+    caption{
+	font-size: 3em;
+	}
+     .col1 { width: 300px; }
+     .col2 { width: 100px; }
+  </style>
+  <table>
+        <caption >Materials</caption>
+        <tr>
+            <th class="col1">Steel</th>
+            <th class="col2">5.000</th>
+		  <th class="col1">Silicon</th>
+            <th class="col2">5.000</th>
+        </tr>
+        <tr>
+            <th>Al-Fe alloy</th>
+            <th>1.000</th>
+            <th>Policarbonate plastic</th>
+            <th>1.000</th>
+	   </tr>
+        <tr>
+            <th>Glass</th>
+            <th>1.000</th>
+            <th>-</th>
+            <th>-</th>
+        </tr>
+    </table>
+  <table>
+        <caption >Components</caption>
+        <tr>
+            <th class="col1">Basic pipe</th>
+            <th class="col2">3.000</th>
+		  <th class="col1">Basic screw</th>
+            <th class="col2">3.000</th>
+        </tr>
+        <tr>
+            <th>Basic power systems</th>
+            <th>1.000</th>
+            <th>Basic fixation</th>
+            <th>1.000</th>
+	   </tr>
+        <tr>
+            <th>Basic hydraulics</th>
+            <th>3.000</th>
+            <th>Basic burner</th>
+            <th>1.000</th>
+        </tr>
+        <tr>
+            <th>Basic connector</th>
+            <th>2.000</th>
+		  <th>Basic component</th>
+            <th>1.000</th>
+        </tr>
+        <tr>
+            <th>Basic electronics</th>
+            <th>1.000</th>
+		  <th>Basic processor</th>
+            <th>1.000</th>
+        </tr>
+        <tr>
+            <th>Basic injector</th>
+            <th>1.000</th>
+		  <th>-</th>
+            <th>-</th>
+        </tr>
+    </table>
+
+    <table>
+        <caption >Frame</caption>
+        <tr>
+            <th class="col1">Basic reinforced XS</th>
+            <th class="col2">2.000</th>
+		  <th class="col1">Basic standart XS</th>
+            <th class="col2">1.000</th>
+        </tr>
+        <tr>
+            <th>Basic reinforced S</th>
+            <th>500</th>
+		  <th>Basic standart S</th>
+            <th>1.000</th>
+        </tr>
+        <tr>
+            <th>Basic reinforced M</th>
+            <th>300</th>
+		  <th>Basic standart M</th>
+            <th>300</th>
+        </tr>
+        <tr>
+            <th>Basic reinforced L</th>
+            <th>300</th>
+		  <th>Basic standart L</th>
+            <th>-</th>
+        </tr>
+        <tr>
+            <th>Basic reinforced XL</th>
+            <th>300</th>
+		  <th>Basic standart XL</th>
+            <th>-</th>
+        </tr>
+    </table>
+
+
+
+
